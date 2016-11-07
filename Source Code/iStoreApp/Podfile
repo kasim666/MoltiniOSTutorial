@@ -1,0 +1,4 @@
+target 'iStoreApp' do
+    use_frameworks!
+    pod 'Moltin', '~> 1.1'
+end
