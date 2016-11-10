@@ -3,18 +3,18 @@
 
 ##Introduction
 
-Moltin is a new in the big world of eCommerce, offering a mobile backend as a service (BaaS) for online shops. Competing directly with established providers such as Shopify, the platform packs a lot of features including order, billing, product listing, inventory and many more, a compelling offering for anyone starting an eCommerce business today. 
+Moltin is new in the big world of eCommerce, offering a mobile backend as a service (BaaS) for online shops. Competing directly with established providers such as Shopify, the platform packs a lot of features including order, billing, product listing, inventory and many more, a compelling offering for anyone starting an eCommerce business today. 
 
-If you have used Firebase before, you will be familiar with the concept of mobile backend as a service (MBaaS). The platform offers a very comprehensive set of REST API endpoints for querying customer information, updating the stock and making a purchase. It may appeal to businesses who are focused on driving the mobile eCommerce market, because lowering cost and shortening time to market may be big factors in success in a competitive and fast changing market. 
+If you have used Firebase before, you will be familiar with the concept of mobile backend as a service (MBaaS). The platform offers a very comprehensive set of REST API endpoints for querying customer information, updating the stock and making a purchase. It may appeal to businesses who are focused on driving the mobile eCommerce market, because lowering cost and shortening time to market maybe big factors in success in a competitive and fast changing market. 
 
-For this tutorial, I will guide you on how to sign up on [Moltin](http://www.moltin.com) for a free account through to creating you own web store and iPhone shopping app. In first part of the tutorial I am going to create a hypothetical electronic gadget store, called "iStore". Feel free to be creative. Our customers wouldn't be able to buy the latest gadgets as they have no way of accessing our store, which is why in the second part, we will be creating an iPhone app to sell our products.
+For this tutorial, I will guide you on how to sign up on [Moltin](http://www.moltin.com) for a free account through to creating you own web store and iPhone shopping app. In the first part of the tutorial I am going to create a hypothetical electronic gadget store, called "iStore". Feel free to be creative. Our customers wouldn't be able to buy the latest gadgets as they have no way of accessing our store, which is why in the second part, we will be creating an iPhone app to sell our products.
 
 This tutorial uses Moltin's iOS SDK which you can download here:
 [Moltin iOS SDK](https://github.com/moltin/ios-sdk)
 
 #Part I. Building the Web Store
 
-In order to create our web store, we need to sign up for a free account on Moltin.com. Simply open up your favourite browser and type `www.moltin.com` into the address bar. Once you are there, click on `Sign Up` and fill in your name and email address. 
+In order to create our web store, we need to sign up for a free account on moltin.com. Simply open up your favourite browser and type `www.moltin.com` into the address bar. Once you are there, click on `Sign Up` and fill in your name and email address. 
 
 **OR**
 
@@ -22,18 +22,18 @@ In order to create our web store, we need to sign up for a free account on Molti
 
 Great! We have created our account.
 ![screenshot-1](./Screenshots/screenshot-1.png)
-Now we want to customize our web store. When you login to your account on [Moltin](https://www.moltin.com), you will notice that the default store has already been created for you, change the name of your store to anything to your liking. I have changed mine to "iStore". 
+Now we want to customize our web store. When you login to your account on [Moltin](https://www.moltin.com), you will notice that the default store has already been created for you, so just change the name of your store to anything to your liking. I have changed mine to "iStore". 
 ![screenshot-2](./Screenshots/screenshot-2.png)
 You will also need to make a note of the API keys for calling API on your store. There are two keys:
 
 * Client ID
 * Client secret
 
-The client ID or "public ID" is needed for most API calls. It gives you basic level of access privileges. We are going to use it on the shopping app to communicate with the store backend.
+The client ID or "public ID" is needed for most API calls. It gives you a basic level of access privileges. We are going to use it on the shopping app to communicate with the store backend.
 
 You should keep the client secret safe and never reveal it or copy-paste it into source code.
 
-You will also notice the API usage counter. For purpose of this tutorial, the 30000 is more enough. 
+You will also notice the API usage counter. For purpose of this tutorial, the 30,000 is more enough. 
 
 Next, go to [Moltin](https://www.moltin.com)'s home page. Click on `Log In` and in the dropdown, choose `Forge Dashboard`. We are going to customise our newly created store with products.
 
@@ -43,11 +43,11 @@ Next, go to [Moltin](https://www.moltin.com)'s home page. Click on `Log In` and 
 
 ##Create Products
 
-It's time to list some products for our gadget store. On the left sidebar, click on `Inventory` button, which reveals 4 options. We would like to add products to our store, so click on `Products`. The other three options help us group products into categories or collections, you can explore on in your own time, but for the purpose of this tutorial, we will not be creating categories or   
+It's time to list some products for our gadget store. On the left sidebar, click on `Inventory` button, which reveals 4 options. We would like to add products to our store, so click on `Products`. The other three options help us group products into categories or collections, you can explore on in your own time, but for the purpose of this tutorial, we will not be creating categories.  
 
 ![screenshot-3](./Screenshots/screenshot-3.png)
 
-Click on the green button on the top right to begin add our first product to the shop. 
+Click on the green button on the top right to add our first product to the shop. 
 
 You have to fill in the required fields and hit the `Submit` button at the bottom to save.
 
@@ -67,12 +67,12 @@ I am going to add two more products because I think they are going to be very po
 ##Create a Customer Account
 Before we finish customising our web store, there is one final thing we have to do. That is creating a test user for accessing the store. 
 
-On the left hand-side of side bar menu, click on "Customers". We will set up a customer account. A customer account has the convenient to speed up check out by saving customer information such as shipping address, credit card number. 
+On the left hand-side of the side bar menu, click on "Customers". We will set up a customer account. A customer account has the convenience of speeding up checkout by saving customer information such as shipping address and credit card number. 
 
 ![screenshot-8](./Screenshots/screenshot-8.png)
 ![screenshot-9](./Screenshots/screenshot-9.png)
 
-**Note**: In real life, you will want to create customer sign up pages instead of directly creating account from the dashboard. Moltin's Customer API is able to register new customers. Creating registration work flow is beyond this tutorial and I suggest you look into the develop documentation for more information.
+**Note**: In real life, you will want to create customer sign up pages instead of directly creating an account from the dashboard. Moltin's Customer API is able to register new customers. Creating a registration work flow is beyond this tutorial and I suggest you look into the developer documentation for more information.
 
 Now that we have created our web store, it's time to create a bespoke shopping app for customer to buy products from us.
 
@@ -106,10 +106,10 @@ Finally install the SDK with command:
 ```
 pod install
 ```
-Setting up workspace is something every iOS developer will eventually get used to. Memorising these commands will save you a lot of time in the future.
+Setting up a workspace is something every iOS developer will eventually get used to. Memorising these commands will save you a lot of time in the future.
 
 ##Create the Login Screen
-Double click on the file called  `iStore.xcworkspace` from the project directory will bring up Xcode. It's time for some fun coding with the new version of Apple's iOS development language, Swift 3.
+Double-click on the file called  `iStore.xcworkspace` from the project directory to bring up Xcode. It's time for some fun coding with the new version of Apple's iOS development language, Swift 3.
 
 You should have a project structure similar to mine:
 ![screenshot-10](./Screenshots/screenshot-10.png) 
@@ -121,7 +121,7 @@ Switching our attention to implementing the user interface. If you open `Main.st
 1. Select the view controller and change its custom class to `LoginController`.
 2. From the object library on lower right hand-side, drag a label on to `LoginController`'s view. Change its text to 'iStore'. 
 3. Set the label's font to 'Futura' with size 36 points. Also change the label's alignment to centre.
-3. Hold `ctrl` key and click drag the cursor from the label on to the container view and release the cursor. A menu should pop up inviting us to set constraints on the label. Choose option "centre horizontally in container".
+3. Hold `ctrl` key, click and drag the cursor from the label on to the container view and release the cursor. A menu should pop up inviting us to set constraints on the label. Choose option "centre horizontally in container".
 4. Repeat step 3 but this time drag the mouse from the label to the top of its parent view before releasing. In the pop up menu, choose to set "vertical spacing to top layout guide". 
 5. Press `alt` + `cmd` + `=` to let Xcode automatically position the label according to the constraints we set.
 
@@ -141,10 +141,10 @@ I choose a top spacing of 80 pixels, left spacing 0 and right spacing of 0. When
 
 We can further customise the text field by:
 
-* set font size to 20 points
-* Set alignment to centre
-* Set placeholder text to "Email"
-* Set keyboard type to "Email address"
+* setting the font size to 20 points
+* Setting alignment to centre
+* Setting placeholder text to "Email"
+* Setting keyboard type to "Email address"
 
 Next we are going drag another text fied and place it below the email text field. Again, with the `pin` tool we can set the spacing:
 
@@ -174,7 +174,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     }
 ```
 
-Next open up the main storyboard again. Use the hotkey `alt` +`cmd`+`enter` to bring up the assistant editor next to the interface designer. Hold `ctrl` while dragging from email text field to the `LoginController`'s code. You can create outlets for both the email text field and password text field, plus the login button.
+Next open up the main storyboard again. Use the hotkey `alt` +`cmd`+`enter` to bring up the assistant editor next to the interface designer. Hold `ctrl` while dragging from the email text field to the `LoginController`'s code. You can create outlets for both the email text field and password text field, plus the login button.
 
 ```
 import UIKit
@@ -188,7 +188,7 @@ class LoginController: UIViewController {
 }
 ```
 
-We are going add a function to `LoginController` to perform the actually login.
+We are going add a function to `LoginController` to perform the actual log in.
 ```
 class LoginController: UIViewController {
     // ...
@@ -229,7 +229,7 @@ Next we are going to create a product listing to showcase awesome gadgets in our
 
 ##Create Product Listing
 
-Open up the main storyboard, we are going to add a navigation controller and a table view controller. Drag the cursor from the navigation controller onto the table view controller. In the popup, choose "root view controller". Click on the navigation bar at the top of the table view controller and set its title to "iStore products".
+Open up the main storyboard as we are going to add a navigation controller and a table view controller. Drag the cursor from the navigation controller onto the table view controller. In the popup, choose "root view controller". Click on the navigation bar at the top of the table view controller and set its title to "iStore products".
 
 ![screenshot-14](./Screenshots/screenshot-14.png)
  
@@ -323,7 +323,7 @@ class ProductListItem : UITableViewCell {
 ```
 **Note**: When making network calls, in this instance, downloading an image from the internet, we have to dispatch the work off of main thread, so the UI performance is not affected.
 
-In the `ProductListController`, we will make API calls using Moltin SDK to get a list of products from the server. 
+In the `ProductListController`, we will make API calls using the Moltin SDK to get a list of products from the server. 
 
 ```
 import UIKit
